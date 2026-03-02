@@ -1,0 +1,98 @@
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #e2bfcd;
+}
+
+/* Main Container */
+
+.container{
+    background-color: white;
+    max-width: 1100px; 
+    margin: 0 auto;
+
+}
+
+/*logo + Navigation */
+.top-bar{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    align-items:center;
+    background-color: #333;
+    color:white;
+}
+
+.logo{
+    padding:20px;
+    font-size:22px;
+    font-weight: bold;
+
+}
+
+nav{
+    text-align: right;
+    padding: 20px;
+
+}
+
+nav a { 
+    color:white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a.hover{
+    color: #ffb6d9;
+}
+
+nav a.active {
+    background-color: #851a5d;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+/* Header */
+
+.header{
+    background-color: #851a5d;
+    color:white;
+    text-align: center;
+    padding: 60px 20px;
+    font-size:26px;
+}
+
+/* Intro Section */
+.intro {
+    text-align:center;
+    padding:40px 20px;
+    max-width: 850px;
+    margin:auto;
+    line-height: 1.6;
+}
+
+/* Grid Section */
+.box-section {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding:40px;
+}
+
+.box{
+    background-color: #f2f2f2;
+    padding:20px;
+    text-align: center;
+    border: 2px solid #851a5d;
+}
+
+.box img{
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+footer{
+    background-color: #333;
+    color:white;
+    text-align: center;
+    padding: 20px;
+}
