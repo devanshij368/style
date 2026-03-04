@@ -1,98 +1,105 @@
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
-    background-color: #e2bfcd;
+    background-color:#e2bfcd;
 }
 
-/* Main Container */
-
+/* MAIN GRID CONTAINER */
 .container{
-    background-color: white;
-    max-width: 1100px; 
-    margin: 0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "topbar topbar topbar"
+        "header header header"
+        "intro intro intro"
+        "box1 box2 box3"
+        "footer footer footer";
 
+    max-width:1100px;
+    margin:0 auto;
+    background-color:white;
 }
 
-/*logo + Navigation */
+/* TOP BAR */
 .top-bar{
+    grid-area: topbar;
     display:grid;
     grid-template-columns: 1fr 2fr;
     align-items:center;
-    background-color: #333;
+    background-color:#333;
     color:white;
 }
 
 .logo{
     padding:20px;
     font-size:22px;
-    font-weight: bold;
-
+    font-weight:bold;
 }
 
 nav{
-    text-align: right;
-    padding: 20px;
-
+    text-align:right;
+    padding:20px;
 }
 
-nav a { 
+nav a{
     color:white;
-    text-decoration: none;
-    margin-left: 20px;
+    text-decoration:none;
+    margin-left:20px;
 }
 
-nav a.hover{
-    color: #ffb6d9;
+nav a:hover{
+    color:#ffb6d9;
 }
 
-nav a.active {
-    background-color: #851a5d;
-    padding: 8px 12px;
-    border-radius: 5px;
+nav a.active{
+    background-color:#851a5d;
+    padding:8px 12px;
+    border-radius:5px;
 }
-/* Header */
 
+/* HEADER */
 .header{
-    background-color: #851a5d;
+    grid-area: header;
+    background-color:#851a5d;
     color:white;
-    text-align: center;
-    padding: 60px 20px;
+    text-align:center;
+    padding:60px 20px;
     font-size:26px;
 }
 
-/* Intro Section */
-.intro {
+/* INTRO */
+.intro{
+    grid-area:intro;
     text-align:center;
     padding:40px 20px;
-    max-width: 850px;
+    max-width:850px;
     margin:auto;
-    line-height: 1.6;
+    line-height:1.7;
 }
 
-/* Grid Section */
-.box-section {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    padding:40px;
-}
+/* BOX AREAS */
+.box1{ grid-area:box1; }
+.box2{ grid-area:box2; }
+.box3{ grid-area:box3; }
 
 .box{
-    background-color: #f2f2f2;
+    background-color:#f2f2f2;
     padding:20px;
-    text-align: center;
-    border: 2px solid #851a5d;
+    text-align:center;
+    border:2px solid #851a5d;
 }
 
 .box img{
-    width: 100%;
-    margin-top: 15px;
+    width:100%;
+    margin-top:15px;
 }
 
 /* FOOTER */
 footer{
-    background-color: #333;
+    grid-area:footer;
+    background-color:#333;
     color:white;
-    text-align: center;
-    padding: 20px;
+    text-align:center;
+    padding:20px;
 }
